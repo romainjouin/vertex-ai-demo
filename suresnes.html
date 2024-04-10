@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Page Title</title>
+    <!-- Your CSS and other head content here -->
+</head>
+
+<head>
+    <title>Your Page Title</title>
+    <!-- Your CSS and other head content here -->
+
+     <style type="text/css">
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+.fixed-height-text {
+    height: 400px; /* Set your desired height */
+    overflow: auto; /* Enables scrolling if content exceeds the height */
+    /* Add any additional styling like padding, border, etc. */
+}
+iframe {
+    width: 100%;
+    max-width: 800px; /* Adjust based on your preference */
+    margin-bottom: 20px;
+    
+}
+
+h2 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: inside square;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #ff4500; /* Adjust the color to make it more visible */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6347; /* A slightly different color for hover effect */
+    text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <iframe id="videoPlayer" width="560" height="315" src="https://youtu.be/REeUEBmvJqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><h2>600.0 : Maire <a href="#" data-timestamp="600" onclick="loadVideoAtTimestamp(this)">Load video at 600s</a></h2>
+<ul>
+<li>Ouverture de la séance du conseil municipal, annonce de la présence de 22 conseillers.
+<li>Ouverture de la séance du conseil municipal, annonce de la présence de 22 conseillers.</li></ul>
+<h2>630.0 : Secrétaire de séance <a href="#" data-timestamp="630" onclick="loadVideoAtTimestamp(this)">Load video at 630s</a></h2>
+<ul> <li>Lecture des pouvoirs donnés par les conseillers absents.</li></ul>
+<h2>690.0 : Maire <a href="#" data-timestamp="690" onclick="loadVideoAtTimestamp(this)">Load video at 690s</a></h2>
+<ul> <li>Présentation des vœux pour la nouvelle année, remerciements aux agents de la ville.</li>
+<li>Présentation des projets de rénovation du centre-ville, de la médiathèque et du square de l'hôtel de ville.</li>
+<li>Annonce du lancement des travaux de la balade en scène ou en bordeaux.</li>
+<li>Présentation du baromètre sur la perception de la ville par les habitants.</li>
+<li>Présentation de la charte architecturale et paysagère.</li>
+<li>Présentation de la charte promoteur en cours et de la charte si tu râles et et paysagère.</li>
+<li>Présentation du projet d'implantation du collège Émile Zola sur le site de l'ancien les achats.</li></ul>
+
+<script>
+    var loadCounter = 0;
+
+    function loadVideoAtTimestamp(element) {
+        var timestamp = element.getAttribute('data-timestamp');
+        var iframe = document.getElementById('videoPlayer');
+        iframe.src = 'https://youtu.be/REeUEBmvJqY?start=' + timestamp + '&loadCounter=' + loadCounter;
+        
+        loadCounter++; // Increment the counter to ensure a unique URL each time
+        return false; // Prevent default action of the link
+    }
+</script>
+
+</body>
+</html>
+
